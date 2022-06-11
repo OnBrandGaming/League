@@ -1,0 +1,255 @@
+/****************
+Table of Contents
+*****************
+
+Universal Elements
+Top of Page
+Style the Cards
+The Footer Section
+
+********/
+
+
+/*******************
+    Universal Elements
+*******************/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+:root{
+    --color-1: #34BCCB;
+    --color-2: #CB4334;  
+}
+
+/***SCROLLBAR***/
+
+/* Track */
+/* width */
+::-webkit-scrollbar {
+    width: 15px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: rgb(13, 39, 43);
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(92, 92, 92); 
+    border-radius: 10px;
+    box-shadow: 5px 0px 10px black;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(92, 92, 92);
+  }
+
+
+/***BODY***/
+
+
+body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(7, 52, 58);
+    color: rgb(189, 224, 235);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+header {
+    background-color: black;
+    color:rgb(194, 178, 37);
+    padding: 30px;
+}
+h1, h2, h3 {
+    text-align: center;
+    padding: 5px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    margin-left: 20px;
+    margin-bottom: .75em;
+}
+
+li:nth-child(even) { 
+    color: rgb(226, 250, 226);
+    }
+
+/*******************
+    Top of Page
+*******************/
+.brandLogo {
+    display: block;
+    margin: auto;
+    background-color: black;
+    width: 80%;
+    height: auto;
+}
+
+.heroImage {
+    background-image: url("https://cdn.pixabay.com/photo/2017/08/10/06/06/controller-2618897_960_720.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 400px;
+    margin-bottom: 30px;
+}
+
+.countDownText {
+    margin: 15px 20px 15px 20px;
+    text-align: center;
+    font-size: 3em;
+    font-weight: bolder;
+    text-shadow: 5px 5px 10px black;
+}
+
+.aboutSection {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 30px;
+    display: inline-block;
+}
+
+@media only screen and (max-width: 400px) {
+    .countDownText {
+      font-size: 1.8em;
+    }
+  }
+
+/*******************
+    Style the Cards
+*******************/
+
+.events {
+    position: relative;
+    border: solid 2 px white;
+    margin-top: 30px;
+}
+
+.contentIndicator {
+    display: none;
+    position:fixed;
+    top:50%;
+    right: 20px;
+    width: fit-content;
+    border-bottom: solid 3px rgba(255, 255, 255, .6);
+    border-radius: 200px;
+    padding: 15px;
+    box-shadow: 8px 0px 10px black;
+    background-color: red;
+    opacity: .7;
+    color: whtie;
+    font-weight: bolder;
+    font-size: 30pt;
+}
+
+.eventCards {
+    white-space: nowrap;
+    overflow-x: auto;
+    width: 100vw;
+    border-radius: 5px;
+    background-color: aqua;
+}
+
+.upcomingTournamentCard {
+    display: inline-block;
+    width: fit-content;
+    border-radius: 5px;
+    background-color: black;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 0px 0px 15px black;
+}
+
+.upcomingTournamentDiv {
+    border: solid 2px var(--color-1);
+    border-radius: 15px;
+    margin: 5px;
+    padding: 5px;
+}
+
+.eventDetails {
+    text-align: center;
+    font-weight: bold;
+}
+
+.cardTitle {
+    font-size: 1.5em;
+    font-weight: bolder;
+    border-bottom: solid 1px var(--color-1);
+}
+
+.cardImage {
+    margin-top: 10px;
+    height: 200px;  
+    width: auto;
+    overflow: hidden;
+    border-radius: 20px;
+    border: solid 2px var(--color-1);
+}
+
+.registrationButton {
+    display: block;
+    margin: 20px auto 20px auto;
+    text-align: center;
+    background-color: var(--color-2);
+    color: black;
+    font-weight: bolder;
+    padding: 10px;
+    width: fit-content;
+    border-radius: 200px;
+    border-bottom: solid 2px white;
+
+}
+
+.registrationButton:hover {
+    cursor: pointer;
+    color: white;
+    text-decoration: underline;
+}
+
+.locationMap {
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+    padding: 3px;
+    
+}
+
+
+/********************
+    The Footer Section
+********************/
+
+
+footer {
+    margin-top: 30px;
+    display: block;
+    background-color: black;
+    color: rgb(195, 229, 231);
+    padding: 20px;
+    width: 100hw; 
+}
+
+.footerLogo {
+    display: block;
+    margin: auto;
+    height: 50px;
+    width: auto;
+}
+
+address {
+    text-align: center;
+}
