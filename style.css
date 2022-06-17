@@ -250,6 +250,9 @@ footer {
     width: auto;
 }
 
+.footerEmail {
+    color: rgb(195, 229, 231);
+}
 address {
     text-align: center;
 }
