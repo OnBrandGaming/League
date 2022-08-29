@@ -243,11 +243,63 @@ li:nth-child(even) {
     
 }
 
+/********************
+    Media
+********************/
 
+figure {
+    display: inline-block;
+}
+
+figcaption {
+    text-align: center;
+    white-space: wrap;
+}
+.mediaContents {
+    background-color: rgb(24, 24, 24);
+    width: 100%;
+    height: fit-content;
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+
+.tournamentImage {
+    display: inline-block;
+    height: 200px;
+    width: auto;
+    border-radius: 10px 10px 0px 0px;
+    margin: 5px;
+}
+
+.tournamentVideo {
+    display: inline-block;
+    height: 200px;
+    width: auto;
+    border-radius: 7%;
+    margin: 5px;
+}
+
+/********************
+    Modal Window for images
+********************/
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  }
+  
 /********************
     The Footer Section
 ********************/
-
 
 footer {
     margin-top: 30px;
