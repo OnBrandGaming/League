@@ -1,320 +1,348 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="Eastern KY's premire eSports tournament host.">
-    <meta name="keywords" content="esports, free, Kentucky, Beattyville, OnBrand, gaming, ">
-    <meta name="author" content="OnBrand Gaming eSports League">
+/****************
+Table of Contents
+*****************
 
-    <title>OBGL</title>
+Universal Elements
+Top of Page
+Style the Cards
+The Footer Section
 
-    <link rel="icon" type="image/x-icon" href="Images/Images/favImg.ico">
-    <link rel="stylesheet" href="style.css">
+********/
 
-    <script src="scripts.js" defer></script>
-  </head>
 
-  <body onscroll="scrollReminder()" onresize="scrollReminder()">
-    <header>
-        <img src="Images/Images/OBGL_logo.JPG" class="brandLogo" alt="OBGL Hero Image">
-        <h1>OnBrand Gaming League</h1>
-    </header>    
+/*******************
+    Universal Elements
+*******************/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 
-    <div class="heroImage">
-        <p class="countDownText" style="text-decoration: underline;">Next Tournament Begins</p>
-        <p class="countDownText">
-            <span id="countDown">0:0:0</span>
-        </p>
-    </div>
+}
 
-    <section class="events">
-        <h2>Upcoming Tournaments</h2>
-        <br>
+:root{
+    --color-1: #34BCCB;
+    --color-2: #CB4334;  
+}
 
-        <div id="eventsDiv" class="eventCards">
-            <div id="contentIndicator" class="contentIndicator">
-                >>
-            </div>
+/***SCROLLBAR***/
 
-            <div id="card1" class="upcomingTournamentCard" style="display:none;">
-        
-                <div class="upcomingTournamentDiv">
-                    <p class="eventDetails">
-                        <span class="cardTitle">Mario Kart</span><br>
-                        Platform: Nintendo Switch<br>
-        
-                        <img class="cardImage" src="https://assets.nintendo.com/image/upload/f_auto/q_auto/dpr_2.625/c_scale,w_400/ncom/en_US/games/switch/m/mario-kart-8-deluxe-switch/description-image" alt="game image"><br>
-        
-                        24 Sep 2022<br>
-                        6 PM - 10PM EST<br>   
-                        4 Player VS<br>  
-                        Random Seeding/Swiss Bracket<br><br>
-        
-                        <span style="color: white; font-weight: bold;">$10 Registration (Players Only)</span><br>        
-                    </p>
-        
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSet1kuFjRppVn9Cjk1qygCTz9khJF188pz3OZNByHTcGrDJVw/viewform?usp=sf_link__;!!Db6frn15oIvDD3UI!hTYZiG_UEMKEpViTDu-bow4YznMgIdcQ5lt8qyezpYCwKnAfT3UZC1X5_gTLDCsIVxWjkyhCd3vIvXVHEHShHg$" title="Register for this event">
-                        <div class="registrationButton">
-                            Register Now
-                        </div>
-                    </a>
-        
-                    <p>*Spectators are not required to register.</p><br>
-        
-                    <p>      
-                        Location<br>
-                        Lee County Shrine Club<br>
-                        1968 Fairgrounds Ridge Rd, <br>Beattyville, KY 41311<br>
+/* Track */
+/* width */
+::-webkit-scrollbar {
+    width: 15px;
+  }
 
-                        <iframe class="locationMap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2572.4141421622085!2d-83.7109161853333!3d37.602570929822456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88436586c4faa677%3A0x31be0c74d7ae6774!2sLee%20County%20Shrine%20Club!5e1!3m2!1sen!2sus!4v1670342929706!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </p>
-                </div>
-            </div>
+  ::-webkit-scrollbar-track {
+    background-color: rgb(13, 39, 43);
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(92, 92, 92); 
+    border-radius: 10px;
+    box-shadow: 5px 0px 10px black;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(92, 92, 92);
+  }
 
-            <div id="card2" class="upcomingTournamentCard" style="display:none;">
-        
-                <div class="upcomingTournamentDiv">
-                    <p class="eventDetails">
-                        <span class="cardTitle">UFC</span><br>
-                        Platform: Xbox One<br>
-        
-                        <img class="cardImage" src="https://cdn.wallpapersafari.com/96/94/G2xCdv.jpg" alt="game image"><br>
-        
-                        Date: Oct<br>
-                        Time: 6PM EST (tentative)<br>   
-                        1 v 1<br>  
-                        Random Seeding/Swiss Bracket<br><br>
-        
-                        <span style="color: white; font-weight: bold;">$10 Registration (Players Only)</span><br>        
-                    </p>
-        
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSet1kuFjRppVn9Cjk1qygCTz9khJF188pz3OZNByHTcGrDJVw/viewform?usp=sf_link__;!!Db6frn15oIvDD3UI!hTYZiG_UEMKEpViTDu-bow4YznMgIdcQ5lt8qyezpYCwKnAfT3UZC1X5_gTLDCsIVxWjkyhCd3vIvXVHEHShHg$" title="Register for this event">
-                        <div class="registrationButton">
-                            Register Now
-                        </div>
-                    </a>
-        
-                    <p>*Spectators are not required to register.</p><br>
-        
-                    <p>
-                        Location<br>
-                        Maybe near you<br>
-                        We're located: <br>Beattyville, KY 41311<br>
-                        <iframe class="locationMap" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d5144.820595168113!2d-83.70979405376049!3d37.60268211333367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sus!4v1654776744770!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </p>
-                </div>
-            </div>
 
-            <div id="card3" class="upcomingTournamentCard">
-        
-                <div class="upcomingTournamentDiv">
-                    <p class="eventDetails">
-                        <span class="cardTitle">Smash Bros</span><br>
-                        Platform: Nintendo Switch<br>
-        
-                        <img class="cardImage" src="https://www.smashbros.com/assets_v2/img/top/hero05_en.jpg" alt="game image"><br>
-        
-                        Jan 15 2022<br>
-                        6 PM<br>   
-                        2 V 2 (Teams)<br>  
-                        Random Seeding/Swiss Bracket<br><br>
-        
-                        <span style="color: white; font-weight: bold;">$10 Registration (Per Player)</span><br>        
-                    </p>
-        
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSet1kuFjRppVn9Cjk1qygCTz9khJF188pz3OZNByHTcGrDJVw/viewform?usp=sf_link__;!!Db6frn15oIvDD3UI!hTYZiG_UEMKEpViTDu-bow4YznMgIdcQ5lt8qyezpYCwKnAfT3UZC1X5_gTLDCsIVxWjkyhCd3vIvXVHEHShHg$" title="Register for this event">
-                        <div class="registrationButton">
-                            Register Now
-                        </div>
-                    </a>
-        
-                    <p>*Spectators are not required to register.</p><br>
-        
-                    <p>      
-                        Location<br>
-                        Lee County Shrine Club<br>
-                        1968 Fairgrounds Ridge Rd, <br>Beattyville, KY 41311<br>
+/***BODY***/
 
-                        <iframe class="locationMap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2572.4141421622085!2d-83.7109161853333!3d37.602570929822456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88436586c4faa677%3A0x31be0c74d7ae6774!2sLee%20County%20Shrine%20Club!5e1!3m2!1sen!2sus!4v1670342929706!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </p>
-                </div>
-            </div>
 
-            <div id="card4" class="upcomingTournamentCard">
-        
-                <div class="upcomingTournamentDiv">
-                    <p class="eventDetails">
-                        <span class="cardTitle">You Choose the Game!</span><br>
-                        Platform: You Choose!<br>
-        
-                        <img class="cardImage" src="https://cdn.pixabay.com/photo/2017/06/29/10/28/games-2453777_960_720.jpg" alt="game image"><br>
-        
-                        Date: TBD<br>
-                        Time: TBD<br>   
-                        Currently only doing 1 v 1<br>  
-                        Single or Double Elimination?<br><br>
-        
-                        <span style="color: white; font-weight: bold;">$10 Registration (Players Only)</span><br>        
-                    </p>
-        
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfamPTPoCgLF134rx1ibqahxu1R7RaZFOnAfFzgmmmMhy1LRg/viewform?usp=sf_link" title="Suggest a new event or give us feedback">
-                        <div class="registrationButton">
-                            Suggest a Tournament
-                        </div>
-                    </a>
-        
-                    <p>*Spectators are not required to register.</p><br>
-        
-                    <p>
-                        Location<br>
-                        Maybe near you<br>
-                        We're located: <br>Beattyville, KY 41311<br>
-                        <iframe class="locationMap" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d5144.820595168113!2d-83.70979405376049!3d37.60268211333367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sus!4v1654776744770!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </p>
-                </div>
-            </div>
-        </div>    
-    </section>
+body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(7, 52, 58);
+    color: rgb(189, 224, 235);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 
-    <section class="mediaContainer">
-        <h3>Proof is in the Pics!</h3>
-        
-        <div class="mediaContents">
+a {
+    text-decoration: none;
+}
 
-            <div class="CameraImageContainer">
-                <img class="tournamentImage" src="Images/Images/OBGL Trophy - NBA 2K22.jpg" alt="NBA 2k22 Trophy" tag="tournamentPic">             
-                <p class="ImageTitle"> NBA 2K22</p>
-            </div>
+header {
+    background-color: black;
+    color:rgb(194, 178, 37);
+    padding: 30px;
+}
+h1, h2, h3 {
+    text-align: center;
+    padding: 5px;
+}
 
-            <div class="CameraImageContainer">
-                <img class="tournamentImage" src="Images/Images/Kelly Paul - NBA 2K22 Champ Aug 2022.jpg" alt="NBA 2K22 Winner" tag="tournamentPic">             
-                <p class="ImageTitle"> Kelly Paul, NBA 2K22 Champ</p>
-            </div>            
-               
-            <iframe class="tournamentVideo" title="Tournament Seeding Short" src="https://www.youtube.com/embed/-00eNCcP_V0" title="OGBL - NBA 2K22 Tournament Seeding Aug 2022" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+ul {
+    list-style-type: none;
+}
 
-            <iframe class="tournamentVideo" title="Nixing Opponent Team Picks" src="https://www.youtube.com/embed/Ka2aCd0atUo" title="OBGL - NBA 2K22 Tournament,  Nix those Picks" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+li {
+    margin-left: 20px;
+    margin-bottom: .75em;
+}
 
-            <div class="CameraImageContainer">
-                <img class="tournamentImage" src="Images/Images/Mario Kart Trophy 2022.jpg" alt="Mario Kart Trophy" tag="tournamentPic">             
-                <p class="ImageTitle"> Mario Kart 2022 Trophy</p>
-            </div>
+li:nth-child(even) { 
+    color: rgb(226, 250, 226);
+    }
 
-            <div class="CameraImageContainer">
-                <img class="tournamentImage" src="Images/Images/Mario Kart Competition.jpg" alt="Tournament Image" tag="tournamentPic">             
-                <p class="ImageTitle"> Mario Kart 2022, Competition</p>
-            </div> 
+/*******************
+    Top of Page
+*******************/
+.brandLogo {
+    display: block;
+    margin: auto;
+    background-color: black;
+    width: 80%;
+    height: auto;
+}
 
-        </div>
-    </section>
+.heroImage {
+    background-image: url("https://cdn.pixabay.com/photo/2017/08/10/06/06/controller-2618897_960_720.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 400px;
+    margin-bottom: 30px;
+}
 
-    <section class="aboutSection">
-        <h2>Tournament Info</h2>
-        <p>
-            The OnBrand Gaming League is proud to host tournaments for gaming enthusiasts.  Have you spent years honing your gaming skills and feel you are ready to put those skills to the test in a no-holds-barred team v team or 1v1 bracket in front of a live audience? Want to know who is the best of the best of your gaming friends?  Are you ready to get out of the house for a change?  Register for a tournament today!<br>
+.countDownText {
+    margin: 15px 20px 15px 20px;
+    text-align: center;
+    font-size: 3em;
+    font-weight: bolder;
+    text-shadow: 5px 5px 10px black;
+}
 
-            <br><span style="font-weight: bolder;">Here are the details:</span><br><br>
-            <ul>
-                <li>
-                    Must be present to play.  No remote participation.
-                </li>  
-                <li>
-                    Prize pool will be a 70/30 split for top two.  First Place will also receive a trophy and of course bragging rights.
-                </li>                             
-                <li>
-                    Only players are required to register, spectators are not.  Entry fee for players will be <span style="font-weight: bolder; text-decoration: underline;">$10 per player</span>.
-                </li>
-                <li>
-                    Competing team members may waive registration fees if they provide a personal console/pc for shared used throughout the event.  Individuals providing personal equipment for tournament use will be required to sign an equipment loss/damage waiver.  (First come first serve basis, the number of extra consoles needed will vary by tournament.  Contact tournament staff if you wish to participate in this opportunity).
-                </li>
-                <li>
-                    Minimum age limit to compete is 15.  There is no maximum age limit to participate. There will be a &#60; 18 y/o bracket and an 18+ y/o bracket whenever possible.
-                </li>    
-                <li>
-                    Registration will be finalized at the event.
-                </li>                
-                <li>
-                    The number of participating teams will be limited and may vary in each tournament.  Bracket seats will be awarded on a first come/first serve basis.  Competing teams and individuals are encouraged to REGISTER EARLY to guarentee a spot in the bracket!
-                </li>                 
-                <li>
-                    All competitors will be required to sign and return an acknowledgement of tournament rules.
-                </li> 
-                <li>
-                    Competitors under the age of 18 will also need signatures (permission) from legal parent/guardian(s) when completing tournament forms.  Guardians are not required to attend the event but are very welcome. 
-                </li>   
-                <li>
-                    Competitors should check in 30 minutes prior to start of the event. 
-                </li>                  
-                <li>
-                    Admission for spectators is $1 and can be paid <span style="font-weight: bolder; text-decoration: underline;">in cash</span> at the door.  The $1 admission fee does not apply to Players, only spectators.
-                </li>
-                <li>
-                    Event staff will provide consoles, monitors, headphones (with mics), and controllers for competition.
-                </li>
-                <li>
-                    Events will be offline and will not be streamed.
-                </li>   
-                <li>
-                    Players who use unapproved software or hardware mods or cheat in any way will be subject to disqualification at the discretion of event staff.  Registration fees will not be reimbursed to individuals disqualified regardless of grounds for disqualification.  
-                </li>       
-                <li>
-                    Alcohol and drug use is strictly prohibited at all gaming events.  Players who violate this rule will be disqualified from tournament play.   
-                </li>                                                    
-            </ul>
-        </p>
-        <br><hr><br>
+.aboutSection {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 30px;
+    display: inline-block;
+}
 
-        <p>
-            Don’t want to play?  That’s ok, admission is only $1 so come support your local teams as they battle it out on the big screen.  Feel every shot and every victory thanks to our outstanding audio system.  If you need a break from the tournament we offer other activities as well:<br> <br>
+@media only screen and (max-width: 400px) {
+    .countDownText {
+      font-size: 1.8em;
+    }
+  }
 
-            <ul>
-                <li>
-                    Cornhole
-                </li>
-                <li>
-                    Giant Jenga
-                </li>                
-                <li>
-                    Concessions and refreshments (proceeds fund more events like this)
-                </li>
-                <li>
-                    Bring an instrument and jam outdoors
-                </li>
-                <li>
-                    Get out the house for once, and brag to your friends about it
-                </li>    
-                <li>
-                    Let us know how to improve future events
-                </li>                            
-            </ul>
-        </p>
-    </section>
+/*******************
+    Style the Cards
+*******************/
 
-    <section id="modalImage" class="modal">
-        <div class="closeButton" onclick="closeModal()">X</div>
+.events {
+    position: relative;
+    border: solid 2 px white;
+    margin-top: 30px;
+}
 
-        <div  class="largeImage">
-            <img id="modalImageLarge" src="">
-        </div>
+.contentIndicator {
+    display: none;
+    position:fixed;
+    top:50%;
+    right: 20px;
+    width: fit-content;
+    border-bottom: solid 3px rgba(255, 255, 255, .6);
+    border-radius: 200px;
+    padding: 15px;
+    box-shadow: 8px 0px 10px black;
+    background-color: red;
+    opacity: .7;
+    color: whtie;
+    font-weight: bolder;
+    font-size: 30pt;
+}
 
-        <div id="modalImageText" class="largeImageDescription"></div>
-    </section>  
-      
-    <footer>
-        <img class="footerLogo" src="Images/Images/OBGL_logo.JPG">
-        <address>
-            OnBrand Gaming League<br>
-            <a href="https://m.facebook.com/OnBrand-Gaming-League-100216862744481/"><img class="socialMediaIcons" src="Images/Icons/FB_Logo.png" alt="FB Logo" title="Join us on FaceBook!"></a> 
+.eventCards {
+    white-space: nowrap;
+    overflow-x: auto;
+    width: 100vw;
+    border-radius: 5px;
+    background-color: aqua;
+}
 
-            <a href="https://www.youtube.com/channel/UCYrB6rd6RqRT48g5Xrujpcw"> <img src="Images/Icons/youtube_logo.png" alt="YouTube Logo" title="Visit our YouTube" class="socialMediaIcons"></a>
+.upcomingTournamentCard {
+    display: inline-block;
+    width: fit-content;
+    border-radius: 5px;
+    background-color: black;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 0px 0px 15px black;
+}
 
-            <a class="footerEmail" href="mailto:onbrandgamingleague@gmail.com" title="Email us"><img class="socialMediaIcons" src="Images/Icons/gmail_Icon.png"><br>OnBrandGamingLeague@Gmail.com</a><br>
+.upcomingTournamentDiv {
+    border: solid 2px var(--color-1);
+    border-radius: 15px;
+    margin: 5px;
+    padding: 5px;
+}
 
-            <a href="#" style="color: white; text-decoration: underline;" title="Return to top of page">^ Back to Top of Page</a>
+.eventDetails {
+    text-align: center;
+    font-weight: bold;
+}
 
-        </address>
-    </footer>
-  </body>
-</html>
+.cardTitle {
+    font-size: 1.5em;
+    font-weight: bolder;
+    border-bottom: solid 1px var(--color-1);
+}
+
+.cardImage {
+    margin-top: 10px;
+    height: 200px;  
+    width: auto;
+    overflow: hidden;
+    border-radius: 20px;
+    border: solid 2px var(--color-1);
+}
+
+.registrationButton {
+    display: block;
+    margin: 20px auto 20px auto;
+    text-align: center;
+    background-color: var(--color-2);
+    color: black;
+    font-weight: bolder;
+    padding: 10px;
+    width: fit-content;
+    border-radius: 200px;
+    border-bottom: solid 2px white;
+    box-shadow: 0px 0px 10px white;
+    transition: box-shadow .4s;
+    animation: pulse 1s;
+    animation-iteration-count: infinite;
+}
+
+.registrationButton:hover {
+    cursor: pointer;
+    color: white;
+    text-decoration: underline;
+    background-color: transparent;
+    box-shadow: 0px 0px 30px white;
+    animation: none;
+}
+
+@keyframes pulse {
+    from {box-shadow: 0px 0px 10px white;}
+    to {box-shadow: 0px 0px 20px white;}
+  }
+
+.locationMap {
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+    padding: 3px;
+    
+}
+
+/********************
+    Media
+********************/
+
+.mediaContents {
+    background-color: rgb(24, 24, 24);
+    width: 100%;
+    height: fit-content;
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+
+.CameraImageContainer {
+    display: inline-block;
+    text-align: center;
+}
+
+.tournamentImage {
+    height: 200px;
+    width: auto;
+    border-radius: 10px 10px 0px 0px;
+    margin: 5px;
+    cursor: pointer; 
+    transition: .3s;
+}
+
+.tournamentImage:hover{
+    opacity: .7;
+}
+.ImageTitle{
+    padding: 5px 10px 5px 10px; 
+}
+
+.tournamentVideo {
+    display: inline-block;
+    height: 200px;
+    width: auto;
+    border-radius: 7%;
+    margin: 5px;
+}
+
+/********************
+    Modal Window for images
+********************/
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  }
+
+  .closeButton{
+    position:absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24pt;
+    font-weight: bolder;
+    color:antiquewhite;
+    cursor: pointer;
+  }
+  
+/********************
+    The Footer Section
+********************/
+
+footer {
+    margin-top: 30px;
+    display: block;
+    background-color: black;
+    color: rgb(195, 229, 231);
+    padding: 20px;
+    width: 100hw; 
+}
+
+.footerLogo {
+    display: block;
+    margin: auto;
+    height: 50px;
+    width: auto;
+}
+
+.footerEmail {
+    color: rgb(195, 229, 231);
+    cursor: pointer;
+}
+
+.socialMediaIcons {
+    height: 30px; 
+    width: auto;
+    cursor: pointer;
+    display: inline-block;
+}
+address {
+    text-align: center;
+}
