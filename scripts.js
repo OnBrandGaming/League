@@ -74,3 +74,15 @@ function scrollReminder() {
 
 
 scrollReminder();
+
+/***********
+  Modal Images
+***********/
+
+function closeModal() {
+  document.getElementById("modalImage").style.display = "none";
+}
+
+function showModal() {
+  document.getElementById("modalImage").style.display = "block";
+}
