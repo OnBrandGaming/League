@@ -5,7 +5,7 @@ Table of Contents
 
 1. Countdown Timer
 2. Horizontal Scroll Reminder
-3. 
+3. Modal Images
 4. 
 5. 
 ******************/
@@ -79,10 +79,20 @@ scrollReminder();
   Modal Images
 ***********/
 
+let pictures = document.getElementsByClassName("tournamentImage");//grab all images by their class name
+
+for (var picture of pictures) {
+  picture.addEventListener('click', showModal);
+}//add event listeners to those pictures
+
 function closeModal() {
   document.getElementById("modalImage").style.display = "none";
+  document.getElementById("modalImageText").innerText = "";
+  document.getElementById("modalImageLarge").src = "";
 }
 
 function showModal() {
+  document.getElementById("modalImageText").innerText = this.alt;
+  document.getElementById("modalImageLarge").src = this.src;
   document.getElementById("modalImage").style.display = "block";
 }
