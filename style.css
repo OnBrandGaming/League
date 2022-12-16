@@ -158,7 +158,7 @@ li:nth-child(even) {
     opacity: .7;
     color: whtie;
     font-weight: bolder;
-    font-size: 20pt;
+    font-size: 10pt;
     transition: right .4s;
 }
 
