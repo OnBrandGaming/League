@@ -15,7 +15,7 @@ Table of Contents
  *****************/
 
 // Set the date we're counting down to
-var countDownDate = new Date("Jan 15, 2023 18:00:00").getTime();
+var countDownDate = new Date("Feb 5, 2023 18:00:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -49,29 +49,24 @@ var x = setInterval(function() {
 ***********/
 let widthScrollArea = document.getElementById('eventsDiv').scrollWidth;
 let horizontalScreenArea = window.innerWidth;
-let pageY;
-const lowthreshold = 450;
-const highthreshold = 1200;
+const element = document.getElementById("eventsDiv");
+const elementPosition = element.getBoundingClientRect();
 
 function scrollReminder() {
     
     widthScrollArea = document.getElementById('eventsDiv').scrollWidth;
     horizontalScreenArea = window.innerWidth + 5;
-    pageY = window.pageYOffset;
-    let sweetSpot; 
-    
-    if(pageY >= lowthreshold && pageY <= highthreshold) {
-        sweetSpot = true;
-    }else{sweetSpot = false}
-        if (sweetSpot === true && (widthScrollArea >= horizontalScreenArea)) {
-        document.getElementById('contentIndicator').style.display = 'block';
-        }
-        else
-        {
-            document.getElementById("contentIndicator").style.display = "none";
-        }
-    }
+    eventCardArea = element.getBoundingClientRect();
 
+    if (eventCardArea.top < 100 && eventCardArea.top > -480) {
+      //console.log("visible @ " + eventCardArea.top);
+      document.getElementById("contentIndicator").style.right = "20px"
+    }
+    else {
+      document.getElementById("contentIndicator").style.right = "-100px"
+    } 
+    
+    }
 
 scrollReminder();
 
@@ -82,7 +77,7 @@ scrollReminder();
 let pictures = document.getElementsByClassName("tournamentImage");//grab all images by their class name
 
 for (var picture of pictures) {
-  picture.addEventListener('click', showModal);
+  picture.addEventListener('click', showModal);  
 }//add event listeners to those pictures
 
 function closeModal() {
