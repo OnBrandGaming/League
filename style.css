@@ -148,7 +148,7 @@ li:nth-child(even) {
     display: block;
     position:fixed;
     top:50%;
-    right: -100px;
+    right: -120px;
     width: fit-content;
     border-bottom: solid 3px rgba(255, 255, 255, .6);
     border-radius: 200px;
