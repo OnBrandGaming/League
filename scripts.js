@@ -63,7 +63,7 @@ function scrollReminder() {
       document.getElementById("contentIndicator").style.right = "20px"
     }
     else {
-      document.getElementById("contentIndicator").style.right = "-100px"
+      document.getElementById("contentIndicator").style.right = "-150px"
     } 
     
     }
