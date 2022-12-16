@@ -58,7 +58,7 @@ function scrollReminder() {
     horizontalScreenArea = window.innerWidth + 5;
     eventCardArea = element.getBoundingClientRect();
 
-    if (eventCardArea.top < 100 && eventCardArea.top > -480) {
+    if (horizontalScreenArea > 1050 && eventCardArea.top < 100 && eventCardArea.top > -480) {
       //console.log("visible @ " + eventCardArea.top);
       document.getElementById("contentIndicator").style.right = "20px"
     }
