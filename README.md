@@ -1,37 +1,22 @@
-## Welcome to GitHub Pages
+<h1 align="center">Hi 👋, I'm Phillip</h1>
+<h3 align="center">A gamer who hosts esports tournaments for south eastern KY.</h3>
 
-You can use the [editor on GitHub](https://github.com/OnBrandGaming/League/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+<p align="left"> <img src="https://komarev.com/ghpvc/?username=onbrandgaming&label=Profile%20views&color=0e75b6&style=flat" alt="onbrandgaming" /> </p>
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+- 🔭 I’m currently working on [maintaining our website,](https://onbrandgaming.github.io/League/)
 
-### Markdown
+- 🌱 I’m currently learning **html, css, javascript, and js visualization techniques**
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+- 📫 How to reach me **onbrandgamingleague@gmail.com**
 
-```markdown
-Syntax highlighted code block
+<h3 align="left">Connect with me:</h3>
+<p align="left">
+<a href="https://fb.com/onbrand gaming league" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="onbrand gaming league" height="30" width="40" /></a>
+</p>
 
-# Header 1
-## Header 2
-### Header 3
+<h3 align="left">Languages and Tools:</h3>
+<p align="left"> <a href="https://www.arduino.cc/" target="_blank" rel="noreferrer"> <img src="https://cdn.worldvectorlogo.com/logos/arduino-1.svg" alt="arduino" width="40" height="40"/> </a> <a href="https://www.chartjs.org" target="_blank" rel="noreferrer"> <img src="https://www.chartjs.org/media/logo-title.svg" alt="chartjs" width="40" height="40"/> </a> <a href="https://d3js.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/d3js/d3js-original.svg" alt="d3js" width="40" height="40"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a> <a href="https://www.photoshop.com/en" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/photoshop/photoshop-line.svg" alt="photoshop" width="40" height="40"/> </a> </p>
 
-- Bulleted
-- List
+<p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=onbrandgaming&show_icons=true&locale=en&layout=compact" alt="onbrandgaming" /></p>
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/OnBrandGaming/League/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=onbrandgaming&show_icons=true&locale=en" alt="onbrandgaming" /></p>
