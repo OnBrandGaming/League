@@ -41,10 +41,7 @@ var x = setInterval(function() {
     clearInterval(x);
     document.getElementById("demo").innerHTML = "Next Tournament Coming Soon!";
   }
-}, 1000)
-else {
-
-};
+}, 1000);
 
 
 /***********
