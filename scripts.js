@@ -33,7 +33,8 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
   // Output the result in an element
-
+    document.getElementById("countDown").innerHTML = days + " days<br>" + hours + " hours "
+  + minutes + " minutes " + seconds + " seconds";
     
   // If the count down is over, write some text 
   if (countDownDate < now) {
@@ -42,8 +43,7 @@ var x = setInterval(function() {
   }
 }, 1000)
 else {
-    document.getElementById("countDown").innerHTML = days + " days<br>" + hours + " hours "
-  + minutes + " minutes " + seconds + " seconds";
+
 };
 
 
